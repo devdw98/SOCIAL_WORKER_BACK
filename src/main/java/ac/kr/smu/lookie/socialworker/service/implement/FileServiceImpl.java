@@ -2,6 +2,7 @@ package ac.kr.smu.lookie.socialworker.service.implement;
 
 import ac.kr.smu.lookie.socialworker.domain.FileInfo;
 import ac.kr.smu.lookie.socialworker.domain.Post;
+import ac.kr.smu.lookie.socialworker.domain.Review;
 import ac.kr.smu.lookie.socialworker.repository.FileRepository;
 import ac.kr.smu.lookie.socialworker.service.CheckSuccessDeleteService;
 import ac.kr.smu.lookie.socialworker.service.FileService;
@@ -112,5 +113,10 @@ public class FileServiceImpl implements FileService{
     @Override
     public void deleteByPost(Post post) {
         fileRepository.deleteByPost(post);
+    }
+
+    @Override
+    public void deleteByReview(Review review){
+        fileRepository.deleteByReview(review);
     }
 }

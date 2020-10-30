@@ -38,6 +38,11 @@ public class FileInfo {
     @JsonIgnore
     private Post post;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn
+    @JsonIgnore
+    private Review review;
+
     @Builder
     public FileInfo(String filename, Date createDate, boolean isImage, String uuid, Post post) {
         this.filename = filename;

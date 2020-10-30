@@ -2,6 +2,7 @@ package ac.kr.smu.lookie.socialworker.service;
 
 import ac.kr.smu.lookie.socialworker.domain.FileInfo;
 import ac.kr.smu.lookie.socialworker.domain.Post;
+import ac.kr.smu.lookie.socialworker.domain.Review;
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -22,4 +23,6 @@ public interface FileService {
     public Map<String, Boolean> delete(Long id);
 
     public void deleteByPost(Post post);
+
+    public void deleteByReview(Review review);
 }
